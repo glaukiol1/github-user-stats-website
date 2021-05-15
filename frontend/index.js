@@ -1,14 +1,8 @@
-const makehtml = (obj) => {
+const makehtml = (obj,usrname) => {
     return `
     <h3>${obj.name}</h3>
     <div id="stats">
-        <ul>
-            <li>Contributed To: ${obj.contributedTo}</li>
-            <li>Total Commits: ${obj.totalCommits}</li>
-            <li>Total Issues: ${obj.totalIssues}</li>
-            <li>Total Pull Requests: ${obj.totalPRs}</li>
-            <li>Total Stars: ${obj.totalStars}</li>
-        </ul>
+        <img src="https://github-readme-stats.vercel.app/api?username=${usrname}">
         <h4>Rank: ${obj.rank.level}</h4>
         <h4>Score: ${Math.floor(obj.rank.score)}</h4>
         <div id="scores">
@@ -37,7 +31,7 @@ document.getElementById('main_submit').addEventListener('click', (ev) => {
         fetch('/api/?username='+username)
             .then(response=>response.json())
             .then(json => {
-                result_div.innerHTML=makehtml(json)
+                result_div.innerHTML=makehtml(json,username)
             })
     }
 })
