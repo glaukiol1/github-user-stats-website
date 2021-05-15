@@ -9,7 +9,7 @@ document.getElementById('main_submit').addEventListener('click', (ev) => {
     } else {
         const result_div = document.getElementById('result')
 
-        fetch('/api/?username'+username)
+        fetch('/api/?username='+username)
             .then(response=>response.json())
             .then(json => {
                 console.log(json)
