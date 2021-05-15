@@ -148,7 +148,10 @@ async function fetchStats(
     issues: stats.totalIssues,
   });
 
-  return stats;
+  return { score: stats.rank.score }
 }
 
-module.exports = fetchStats;
+console.log(fetchStats('glaukiol1',true,true))
+
+
+// module.exports = fetchStats;
