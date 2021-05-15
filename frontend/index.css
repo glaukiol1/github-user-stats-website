@@ -24,10 +24,10 @@
 
 #main_submit {
     width: 10%;
-    padding: 15px 15px;
+    padding: 20px;
     border: none;
     outline: none;
     background-color: lightgreen;
     color: black;
-
+    border-radius: 5px;
 }

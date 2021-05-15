@@ -148,7 +148,7 @@ async function fetchStats(
     issues: stats.totalIssues,
   });
 
-  return { score: stats.rank.score, rank: stats.rank.level }
+  return stats;
 }
 
 
