@@ -36,15 +36,7 @@ module.exports = async (req, res) => {
   } = req.query;
   let stats;
 
-  res.setHeader("Content-Type", "image/svg+xml");
-
-  if (blacklist.includes(username)) {
-    return res.send(renderError("Something went wrong"));
-  }
-
-  if (locale && !isLocaleAvailable(locale)) {
-    return res.send(renderError("Something went wrong", "Language not found"));
-  }
+  res.setHeader("Content-Type", "application/json");
 
   try {
     stats = await fetchStats(
@@ -62,10 +54,10 @@ module.exports = async (req, res) => {
     res.setHeader("Cache-Control", `public, max-age=${cacheSeconds}`);
     return res.send(
       JSON.stringify({
-      score: (await fetchStats('glaukiol1',true,true)).score
+      score: stats.score
       })
     );
   } catch (err) {
-    return res.send(renderError(err.message, err.secondaryMessage));
+    return res.send(JSON.stringify(err.message, err.secondaryMessage));
   }
 };
