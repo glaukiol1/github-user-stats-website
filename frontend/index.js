@@ -1,10 +1,10 @@
 const makehtml = (obj,usrname) => {
     return `
-    <h3>${obj.name}</h3>
+    <h2>Name: ${obj.name}</h3>
     <div id="stats">
-        <img src="https://github-readme-stats.vercel.app/api?username=${usrname}">
-        <h4>Rank: ${obj.rank.level}</h4>
-        <h4>Score: ${Math.floor(obj.rank.score)}</h4>
+        <img src="https://github-readme-stats.vercel.app/api?username=${usrname}&hide_rank=true">
+        <h3>Rank: ${obj.rank.level}</h4>
+        <h3>Score: ${Math.floor(obj.rank.score)} | Full Score: ${obj.rank.score}</h4>
         <div id="scores">
             <hr>
             <h4>Ranks/Scores</h4>
