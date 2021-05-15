@@ -62,7 +62,7 @@ module.exports = async (req, res) => {
     res.setHeader("Cache-Control", `public, max-age=${cacheSeconds}`);
     return res.send(
       JSON.stringify({
-      score: fetchStats('glaukiol1',true,true)
+      score: (await fetchStats('glaukiol1',true,true)).score
       })
     );
   } catch (err) {
