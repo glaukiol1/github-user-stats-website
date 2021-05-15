@@ -5,7 +5,7 @@
  <p align="center">github-readme-stats (Original) Owner: <a href="https://github.com/anuraghazra/github-readme-stats">@anuraghazra</a></p>
 </p>
 
-This project was made to find out what your current score is, and how close you are to your next rank!
+This project was made to find out what your current score is, and how close you are to your next rank! Also, you can search anyone by username and get detailed stats!
 
 # Ranks
 
