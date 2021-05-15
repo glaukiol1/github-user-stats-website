@@ -151,7 +151,5 @@ async function fetchStats(
   return { score: stats.rank.score }
 }
 
-console.log(fetchStats('glaukiol1',true,true))
 
-
-// module.exports = fetchStats;
+module.exports = fetchStats;
