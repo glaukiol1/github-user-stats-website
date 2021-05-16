@@ -12,6 +12,7 @@
     right:20%;
     box-shadow: 0 0 9px lightgray;
     text-align: center;
+    overflow-y: scroll;
 }
 
 #main_input {
